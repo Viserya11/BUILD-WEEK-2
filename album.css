@@ -116,6 +116,11 @@ p {
     
 }
 
+.link:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
 
 .homeicon {
     width: 20px;
@@ -205,4 +210,41 @@ hr {
   .band a {
     color: #fff;
     font-weight: bold;
+  }
+
+  .bottomcontainer {
+    position: absolute;
+    width: 85vw;
+    margin-left: 15vw;
+    margin-top: 45vh;
+    background-color: transparent;
+  }
+
+  .table {
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+  }
+
+  .greenplaybutton {
+    width: 70px;
+    margin: 10px;
+  }
+
+  .heart {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .more {
+    width: 30px;
+    height: 30px;
+    margin-top: -60px;
+    margin-left: 10px;
+  }
+
+  .icons {
+    display: inline-flex;
+    
   }
