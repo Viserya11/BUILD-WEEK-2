@@ -79,8 +79,10 @@ p {
 }
 
 .nav-link {
-    color: #ffffff;
+    color: #706a6c;
     margin-bottom: -10px;
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
 .nav-link:hover {
@@ -96,6 +98,7 @@ p {
     margin-bottom: 5px;
     font-size: 1.5em;
     font-weight: bold;
+    color: #fff;
 }
 
 .scrolly {
@@ -108,20 +111,25 @@ p {
 }
 
 .link {
-    font-size: 0.5em;
+    font-size: 0.8em;
+    
 }
+
 
 .homeicon {
     width: 20px;
     margin-top: -5px;
+    margin-right: 10px;
 }
 
 .searchicon {
     width: 20px;
     margin-top: -5px;
+    margin-right: 10px;
 }
 
 .libraryicon {
     width: 20px;
     margin-top: -5px;
+    margin-right: 10px;
 }
