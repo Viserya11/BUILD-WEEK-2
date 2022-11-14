@@ -3,6 +3,7 @@
 * {
   font-family: "Fira Sans";
   box-sizing: border-box;
+  color: white;
 }
 body {
   height: 100vh;
@@ -16,7 +17,7 @@ body {
 
 #top {
   background-color: blue;
-  flex-grow: 4;
+  flex-grow: 11;
 }
 #sidePanel {
   background-color: #121212;
@@ -53,14 +54,19 @@ body {
   margin: 0.5em 0;
 }
 
+#mainRight {
+  display: flex;
+  flex-direction: column;
+}
 #mainPanel {
   background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
 }
 #user-bar {
   position: fixed;
@@ -95,7 +101,7 @@ body {
   margin-right: 1em;
 }
 #artistsinfo {
-  padding-top: 12rem;
+  padding-top: 8rem;
   flex-grow: 1;
 }
 h1 {

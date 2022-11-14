@@ -135,7 +135,17 @@
           </div>
           </div>
           <!--Main Panel to the right-->
-          <div id="mainPanel" class="col-sm-12 col-md-10 p-0">
+          <div id="mainRight" class="col-sm-12 col-md-10 p-0">
+            <div id="mainPanel" class="jumbotron jumbotron-fluid p-0 m-0">
+                <div class="container ml-0 p-0">
+                    <div id="artistsinfo" class="px-4">
+                        <h1>Queen</h1>
+                        <p class="lead">
+                         100,000,000 monthly listeners
+                        </p>
+                      </div>
+                </div>
+              </div>
                 <div id="user-bar" class="">
                     <div class="container d-flex justify-content-between" style="width:90%; margin-left: 0;">
                     <div id="arrows" class="d-flex justify-content-between">
@@ -169,13 +179,6 @@
                     </div>
                     </div>
                 </div>
-              <div id="artistsinfo" class="container">
-                <h1>Queen</h1>
-                <p class="lead">
-                 100,000,000 monthly listeners
-                </p>
-              </div>
-
             <div id="mainContent">
                 <div id="playpause" class="d-flex align-items-center px-4 pb-0 pt-4">
                     <div id="pause" class="rounded-circle d-flex justify-content-center align-items-center mr-3" style="width:50px; height:50px; background-color:#1DB954; font-weight:900; font-size: 15pt;">||</div>
@@ -201,11 +204,27 @@
           </div>
         </div>
         <!--Footer Thingy-->
-        <footer id="bottom" class="m-0">
-          <div id="musicinfo"></div>
-          <div id="music-bar"></div>
-          <div id="options">
+        <footer id="bottom" class="row m-0 pt-4 px-4 justify-content-between">
+          <div id="musicinfo">
+            <div id="playinginfo" class="row">
+                <div id="album cover" style="width:50px; height:50px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Queen_The_Works.png" class="img-fluid" style="width:100%; height:100%; object-fit: cover;"/>
+                </div>
+                <div id="info" class="d-flex flex-column justify-content-center pl-4">
+                    <div id="albumtitle"><h5>title</h5></div>
+                    <div id="songtitle"><p>song</p></div>
+                </div>
+            </div>
             <div></div>
+            <div></div>
+          </div>
+          <div id="music-bar"></div>
+          <div id="options" class="d-flex">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+                    <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                  </svg>
+            </div>
             <div>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 21H4C2.89543 21 2 20.1046 2 19V9C2 7.89543 2.89543 7 4 7H5V5C5 3.89543 5.89543 3 7 3H20C21.1046 3 22 3.89543 22 5V16C22 17.1046 21.1046 18 20 18H12V19C12 20.1046 11.1046 21 10 21ZM4 9V19H10V9H4ZM7 7H10C11.1046 7 12 7.89543 12 9V16H20V5H7V7Z" fill="currentColor"></path>
@@ -237,5 +256,6 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="artist.js"></script>
   </body>
 </html>
