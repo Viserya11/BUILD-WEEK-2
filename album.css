@@ -214,10 +214,10 @@ hr {
   }
 
   .bottomcontainer {
-    position: absolute;
+    position: relative;
     width: 85vw;
-    margin-left: 15vw;
-    margin-top: 45vh;
+    margin-left: 0vw;
+    margin-top: 0vh;
     background-color: transparent;
   }
 
