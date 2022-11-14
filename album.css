@@ -113,6 +113,7 @@ p {
 
 .link {
     font-size: 0.8em;
+    text-decoration: none;
     
 }
 
@@ -224,6 +225,7 @@ hr {
     background-color: transparent;
     color: #fff;
     border: 0px;
+    font-weight: 400;
   }
 
   .greenplaybutton {
