@@ -102,6 +102,7 @@ p {
 }
 
 .scrolly {
+    padding-left: 10px;
     width: 15vw;
     margin-left: 0px;
     height: 62vh;
@@ -158,4 +159,35 @@ hr {
     width: 30px;
   }
 
-  
+  .topcontainer {
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    height: 35vh;
+    background: rgb(91,33,74);
+    background: linear-gradient(0deg, rgba(91,33,74,1) 0%, rgba(161,57,132,1) 100%);
+  }
+
+  .albumlogo {
+    width: 170px;
+    height: 170px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 7%;
+  }
+
+  span {
+    color: #fff;
+    margin-top: 13%;
+    font-weight: 800;
+    font-size: 0.8em;
+    
+  }
+
+  h1 {
+    color: #fff;
+    margin-top: 15%;
+    margin-left: -50px;
+    font-weight: 800;
+    font-size: 2em;
+  }
