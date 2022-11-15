@@ -126,6 +126,9 @@ h1 {
 #ellip {
   color: rgba(255, 255, 255, 0.532);
 }
+.popular {
+  color: white;
+}
 footer {
   flex-grow: 1;
   background-color: #191919;
