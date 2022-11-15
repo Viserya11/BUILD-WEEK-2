@@ -1,5 +1,5 @@
 const card = (song) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards">
-<img class="img-fluid" src="${song.album.cover_medium}" alt="img placeholder" />
+<img class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" />
 <p>
   <a href="/album_page.html?albumId=${song.album.id}">${song.album.title}</a>
   <br />
@@ -51,7 +51,7 @@ search()
 
 }
 
-const goodMorningData = async () => {
+const christmasSongs = async () => {
 
 const goodMorningRow = document.querySelector('.goodMorning')
 const ul = document.getElementById('list')
@@ -87,7 +87,7 @@ console.log(ul)
 }
 
 
-goodMorningData()
+christmasSongs()
 
 window.onload = () => {
 search()
