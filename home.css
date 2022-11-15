@@ -19,6 +19,10 @@ body {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+/*SIDEBAR SECTION*/
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
 .navbar.fixed-left {
   position: fixed;
   top: 0;
@@ -311,11 +315,21 @@ ul {
 }
 
 .goodMorningDivs {
+<<<<<<< HEAD
   width: 300px;
+=======
+ width:300px;
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
   height: 80px;
   background-color: rgba(255, 255, 255, 0.179);
   border-radius: 5px;
   position: relative;
+<<<<<<< HEAD
+=======
+ 
+
+
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
 }
 
 a {
@@ -327,6 +341,7 @@ a {
   display: none;
 }
 
+<<<<<<< HEAD
 .img-div {
   position: absolute;
   left: 0px;
@@ -335,12 +350,28 @@ a {
 .text-div {
   position: absolute;
   left: 90px;
+=======
+.img-div{
+  position: absolute;
+  left:0px
+
+}
+
+.text-div{
+  position: absolute;
+  left:90px
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
 }
 .login-div {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
 }
 
 .login-face-holder {
@@ -362,16 +393,26 @@ a {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .bottom-container {
   background-color: rgba(9, 9, 9, 0.997);
 }
 
 a:hover {
+=======
+
+.bottom-container{
+  background-color: rgba(9, 9, 9, 0.997);;
+}
+
+a:hover{
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
   text-decoration: none;
   cursor: pointer;
   color: white;
 }
 
+<<<<<<< HEAD
 .li-list {
   color: rgba(255, 255, 255, 0.548);
   margin-left: 5px;
@@ -447,3 +488,15 @@ a:hover {
   width: 20px;
   height: 20px;
 }
+=======
+
+.li-list{
+
+  color:rgba(255, 255, 255, 0.548);
+  margin-left:5px;
+  font-size: 14px;
+
+}
+
+
+>>>>>>> d4640d4033e5cc062ed5dad60f24c3db577a9473
