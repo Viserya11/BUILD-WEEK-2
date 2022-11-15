@@ -96,7 +96,6 @@ ul {
   }
 }
 
-/* BOTTOM PLAYER SECTION*/
 @media (min-width: 768px) {
   .player {
     left: 230px;
@@ -185,7 +184,7 @@ ul {
   box-shadow: -200px 0 0 200px #007bff;
 }
 
-/*MAIN PAGE SECTION*/
+
 
 .mainLinks {
   margin-top: 1.5rem;
@@ -265,7 +264,7 @@ ul {
 }
 
 .mainButton {
-  /* border: 1px solid #fff !important; */
+  
   border-radius: 20px !important;
   height: 2.2em !important;
   width: 7em;
@@ -280,10 +279,7 @@ ul {
   text-transform: uppercase;
 }
 
-#hipHopSection,
-#Behemoth {
-  margin-bottom: 7rem;
-}
+
 
 #followers {
   color: white;
