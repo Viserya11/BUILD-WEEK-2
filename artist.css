@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;700;900&display=swap");
+
+* {
+  font-family: "Fira Sans";
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#innerBody {
+  height: 100%;
+  background-color: black;
+}
+
+#top {
+  background-color: blue;
+  flex-grow: 11;
+}
+#sidePanel {
+  background-color: #121212;
+  color: white;
+  border-right: black solid 2pt;
+}
+#sidePanel > div {
+  background-color: black;
+  padding-left: 4em;
+}
+#spotify {
+  font-weight: 400;
+  font-size: 16pt;
+}
+#barLinks {
+  list-style: none;
+  margin: 1em 0;
+}
+#barLinks li {
+  margin: 0.5em 0;
+}
+#createLinks p {
+  margin: 0;
+}
+#createLinks li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+#heartbox {
+  background-image: linear-gradient(135deg, #422a97, white);
+}
+#type li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+
+#mainRight {
+  display: flex;
+  flex-direction: column;
+}
+#mainPanel {
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 9;
+  background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -180px;
+}
+#user-bar {
+  position: fixed;
+  top: 0;
+  width: 75%;
+  padding: 1em 0;
+}
+#arrows {
+  width: 7%;
+}
+#left,
+#right {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #121212d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#userdropdown {
+  background-color: #121212d2;
+}
+#userprofile {
+  background-color: #595959;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+}
+#artistsinfo {
+  padding-top: 8rem;
+  position: absolute;
+  bottom: 0;
+}
+h1 {
+  font-size: 60pt;
+  font-weight: 900;
+}
+#mainContent {
+  width: 100%;
+  background-image: linear-gradient(#5d2222, #121212 20%);
+  bottom: 0;
+  right: 0;
+  flex-grow: 4;
+}
+#followbtn {
+  background-color: transparent;
+  color: white;
+  padding: 0 1em;
+  border: solid rgba(255, 255, 255, 0.532) 1pt;
+}
+#ellip {
+  color: rgba(255, 255, 255, 0.532);
+}
+.popular {
+  color: white;
+}
+footer {
+  flex-grow: 1;
+  background-color: #191919;
+  width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
