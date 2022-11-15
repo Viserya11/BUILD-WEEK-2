@@ -66,6 +66,7 @@ for(let i=0; i < songs.length-15; i++) {
 const song = songs[i]
 
 
+
 goodMorningRow.innerHTML += `<div class="col-5  col-lg-2  goodMorningDivs m-2 mb-5">
 <div class="img-div">
  <img class="  " src="${song.album.cover_medium}" alt="img placeholder" height="80px"  />
