@@ -3,9 +3,9 @@ const card = (
 ) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards">
 <img class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" />
 <p>
-  <a href="/album_page.html?albumId=${song.album.id}">${song.album.title}</a>
+  <a href="/album.html?albumId=${song.album.id}">${song.album.title}</a>
   <br />
-  <a href="/artist_page.html">${song.artist.name}</a>
+  <a href="/artist.html">${song.artist.name}</a>
 </p>
 </div>`;
 
@@ -63,7 +63,7 @@ const christmasSongs = async () => {
  </div>
 
 <div class="text-div">
-<a class=" a-gm ml-2" href="/album_page.html">${song.title_short}</a>
+<a class=" a-gm ml-2" href="/album.html">${song.title_short}</a>
 </p></div>
  
  
