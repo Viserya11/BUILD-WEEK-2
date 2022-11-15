@@ -59,14 +59,15 @@ body {
   flex-direction: column;
 }
 #mainPanel {
-  background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   color: white;
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-grow: 9;
+  background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -180px;
 }
 #user-bar {
   position: fixed;
@@ -102,7 +103,8 @@ body {
 }
 #artistsinfo {
   padding-top: 8rem;
-  flex-grow: 1;
+  position: absolute;
+  bottom: 0;
 }
 h1 {
   font-size: 60pt;
@@ -113,7 +115,7 @@ h1 {
   background-image: linear-gradient(#5d2222, #121212 20%);
   bottom: 0;
   right: 0;
-  flex-grow: 16;
+  flex-grow: 4;
 }
 #followbtn {
   background-color: transparent;
@@ -129,4 +131,6 @@ footer {
   background-color: #191919;
   width: 100%;
   color: white;
+  position: fixed;
+  bottom: 0;
 }

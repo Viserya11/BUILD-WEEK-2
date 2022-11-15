@@ -9,6 +9,7 @@ const getArtist = async () =>
     .then((response) => response.json())
     .then((artist) => {
       changeBackground(artist);
+      getId(artist);
       console.log(artist);
     });
 
@@ -18,4 +19,7 @@ const changeBackground = (artist) => {
   const backgroundPhoto = document.getElementById("mainPanel");
 
   backgroundPhoto.style.backgroundImage = `url('${artist.picture_big}')`;
+};
+const getId = (artist) => {
+  console.log(artist.id);
 };
