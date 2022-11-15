@@ -19,7 +19,6 @@ body {
   max-width: 100%;
 }
 
-
 .navbar.fixed-left {
   position: fixed;
   top: 0;
@@ -312,14 +311,11 @@ ul {
 }
 
 .goodMorningDivs {
- width:300px;
+  width: 300px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.179);
   border-radius: 5px;
   position: relative;
- 
-
-
 }
 
 a {
@@ -331,23 +327,20 @@ a {
   display: none;
 }
 
-.img-div{
+.img-div {
   position: absolute;
-  left:0px
-
+  left: 0px;
 }
 
-.text-div{
+.text-div {
   position: absolute;
-  left:90px
+  left: 90px;
 }
 .login-div {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
-  
-  
 }
 
 .login-face-holder {
@@ -369,33 +362,28 @@ a {
   width: 100%;
 }
 
-
-.bottom-container{
-  background-color: rgba(9, 9, 9, 0.997);;
+.bottom-container {
+  background-color: rgba(9, 9, 9, 0.997);
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
   cursor: pointer;
   color: white;
 }
 
-
-.li-list{
-
-  color:rgba(255, 255, 255, 0.548);
-  margin-left:5px;
+.li-list {
+  color: rgba(255, 255, 255, 0.548);
+  margin-left: 5px;
   font-size: 14px;
-
 }
-
 
 .topbar {
   display: flex;
   justify-content: space-between;
   background-color: #101010;
   padding: 14px 30px;
-  width:100%
+  width: 100%;
 }
 .topbar .prev-next-buttons button {
   color: #7a7a7a;
@@ -455,7 +443,7 @@ a:hover{
 .topbar .navbar button:focus {
   background-color: #f2f2f2;
 }
-.navbar-icons{
-  width:20px;
-  height:20px
+.navbar-icons {
+  width: 20px;
+  height: 20px;
 }
