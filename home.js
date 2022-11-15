@@ -16,7 +16,7 @@ const search = async (artist = defaultArtist) => {
   const h2 = document.querySelector("#results h2");
 
   const response = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artist
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`
   );
   const data = await response.json();
   const songs = data.data;
