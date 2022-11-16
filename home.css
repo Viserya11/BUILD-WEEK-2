@@ -29,8 +29,8 @@ body {
   width: 230px;
   flex-flow: column nowrap;
   align-items: flex-start;
-  background-color: black;
-  z-index: 1200;
+  background-color: rgba(0, 0, 0, 0.929);
+  z-index: 1;
 }
 
 .navbar.fixed-left .navbar-collapse .navbar-nav a {
@@ -127,10 +127,11 @@ ul {
 .bg-container {
   height: 5.5rem;
   background-color: #282828;
+  width: 2000px;
 }
 
 .playerControls {
-  max-width: 220px;
+  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -478,4 +479,62 @@ artist-small-player{
 
 #searchBtn{
   height:20px
+}
+
+.show{
+  background-color: white;
+}
+
+.play-icon{
+  height: 20px;
+ width:10%;
+}
+
+
+
+.playButtonCard{
+  
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+display: none;
+opacity: 0.5;
+
+
+}
+
+.songCards{
+  position: relative;
+  cursor: pointer;
+  animation: 5s fadeIn;
+  animation-fill-mode: forwards;
+
+}
+
+  
+
+.songCards:hover  .playButtonCard{
+visibility: visible;
+position: absolute;
+  height:61px;
+  width:65px;
+  bottom:1px;
+ right:130px;
+ display: block;
+ transition: .4s;
+ cursor: pointer;
+ opacity: 0.5;
+
+}
+.songCards:hover{
+  background-color: #aea8a83d;
+  animation: 5s fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
