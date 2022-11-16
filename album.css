@@ -233,7 +233,7 @@ hr {
     margin-left: 0vw;
     margin-top: 0vh;
     background-color: transparent;
-    overflow: scroll;
+    overflow: auto;
     height: 55vh;
   }
 
