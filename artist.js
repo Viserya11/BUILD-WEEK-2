@@ -1,8 +1,10 @@
 //the fetch
 
 let band = "linkin-park";
+let url = new URLSearchParams(window.location.search);
+band = url.get("name");
 
-const getArtist = async () =>
+const getArtist = async () => {
   await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/artist/${band}`
   )
@@ -17,6 +19,7 @@ const getArtist = async () =>
       getArtistPick(artist);
       console.log(artist);
     });
+};
 getArtist();
 
 //change bg photo to Artist
