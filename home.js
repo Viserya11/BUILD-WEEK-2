@@ -110,5 +110,3 @@ function scrolldiv() {
 window.onload = () => {
   search();
 };
-
-

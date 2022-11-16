@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const albumId = urlParams.get("album_id");
+const albumId = urlParams.get("albumId");
 function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
 const options = {
