@@ -9,7 +9,7 @@ const card = (
 </p>
 </div>`;
 
-let defaultArtist = "queen";
+let defaultArtist = "queen"; 
 
 const search = async (artist = defaultArtist) => {
   const row = document.querySelector("#results .row");
