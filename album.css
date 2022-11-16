@@ -21,11 +21,6 @@ body {
 }
 
 
-.right {
-  width: 85vw;
-  z-index: -2;
-    
-}
 
 .top {
   width: 85vw;
@@ -233,7 +228,7 @@ hr {
     margin-left: 0vw;
     margin-top: 0vh;
     background-color: transparent;
-    overflow: auto;
+    overflow: auto ;
     height: 55vh;
   }
 
