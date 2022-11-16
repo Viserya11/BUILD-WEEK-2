@@ -19,7 +19,6 @@ body {
   max-width: 100%;
 }
 
-/*SIDEBAR SECTION*/
 .navbar.fixed-left {
   position: fixed;
   top: 0;
@@ -95,15 +94,35 @@ ul {
   #sidebar {
     display: none;
   }
+
+  .navbar2{
+    visibility: hidden;
+  }
+
+  .goodMorningDivs{
+    padding-right: 200px;
+    
+  }
+
+  
+
+.topbar{
+  height: 100px;
+}
 }
 
-/* BOTTOM PLAYER SECTION*/
 @media (min-width: 768px) {
   .player {
     left: 230px;
     max-width: calc(100vw - 230px);
   }
+  .spotify-navbar-mobile{
+    display: none;
+  }
 }
+
+
+
 .bg-container {
   height: 5.5rem;
   background-color: #282828;
@@ -186,7 +205,7 @@ ul {
   box-shadow: -200px 0 0 200px #007bff;
 }
 
-/*MAIN PAGE SECTION*/
+
 
 .mainLinks {
   margin-top: 1.5rem;
@@ -266,7 +285,7 @@ ul {
 }
 
 .mainButton {
-  /* border: 1px solid #fff !important; */
+  
   border-radius: 20px !important;
   height: 2.2em !important;
   width: 7em;
@@ -281,10 +300,7 @@ ul {
   text-transform: uppercase;
 }
 
-#hipHopSection,
-#Behemoth {
-  margin-bottom: 7rem;
-}
+
 
 #followers {
   color: white;
@@ -308,18 +324,16 @@ ul {
 }
 
 .dark-cards {
-  background-color: #181818;
+  background-color: #292929;
 }
 
 .goodMorningDivs {
- width:300px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.179);
+  width: 300px;
+  height: 60px;
+  background-color: #e9e4e453;
   border-radius: 5px;
   position: relative;
- 
-
-
+  font-size: 14px;
 }
 
 a {
@@ -331,23 +345,20 @@ a {
   display: none;
 }
 
-.img-div{
+.img-div {
   position: absolute;
-  left:0px
-
+  left: 0px;
 }
 
-.text-div{
+.text-div {
   position: absolute;
-  left:90px
+  left: 60px;
 }
 .login-div {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
-  
-  
 }
 
 .login-face-holder {
@@ -369,24 +380,101 @@ a {
   width: 100%;
 }
 
-
-.bottom-container{
-  background-color: rgba(9, 9, 9, 0.997);;
+.bottom-container {
+  background-color: rgba(9, 9, 9, 0.997);
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
   cursor: pointer;
   color: white;
 }
 
-
-.li-list{
-
-  color:rgba(255, 255, 255, 0.548);
-  margin-left:5px;
+.li-list {
+  color: rgba(255, 255, 255, 0.548);
+  margin-left: 5px;
   font-size: 14px;
-
 }
 
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #101010e8;
+  padding: 14px 30px;
+  width: 100%;
+}
+.topbar .prev-next-buttons button {
+  color: #7a7a7a;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  font-size: 18px;
+  border: 0px;
+  background-color: #090909;
+  margin-right: 10px;
+}
+.topbar .navbar {
+  display: flex;
+  align-items: center;
+}
+.topbar .navbar ul {
+  list-style: none;
+}
+.topbar .navbar ul li {
+  display: inline-block;
+  margin: 0px 8px;
+  width: 70px;
+}
+.topbar .navbar ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:active,
+.topbar .navbar ul li a:focus {
+  color: #ffffff;
+  font-size: 15px;
+}
+.topbar .navbar ul li.divider {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0px 20px;
+  width: auto;
+}
+.topbar .navbar button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+  background-color: #f2f2f2;
+}
+.navbar-icons {
+  width: 20px;
+  height: 20px;
+}
 
+.music-player-info{
+  font-size: 14px;
+}
+
+artist-small-player{
+  font-weight: normal;
+  font-size: 10px;
+}
+
+#searchBtn{
+  height:20px
+}
