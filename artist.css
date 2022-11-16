@@ -61,14 +61,15 @@ body {
 }
 #mainPanel {
   color: white;
+  text-shadow: #121212 0px 0px 2px;
   position: relative;
   display: flex;
   flex-direction: column;
   background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
   background-repeat: no-repeat;
+  height: 400px;
   background-size: cover;
   background-position-y: -250px;
-  height: 400px;
 }
 #user-bar {
   position: fixed;
