@@ -1,10 +1,8 @@
 
 
 const card = (
-  
   song
-
-) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards  ">
+) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards ">
 <img class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" />
 <p>
   <a href="/album.html?albumId=${song.album.id}">${song.album.title}</a>
@@ -25,6 +23,7 @@ const gymSongs = async (artist = gym) => {
     gymRow.innerHTML += card(song);
   };
 };
+
 
 
 gymSongs()
@@ -66,12 +65,12 @@ const getSearch = (event) => {
     search();
   }
 };
-
-const christmasSongs = async () => {
+let xmas = "santa"
+const christmasSongs = async (artist = xmas) => {
   const goodMorningRow = document.querySelector(".goodMorning");
   const ul = document.getElementById("list");
   const response = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/search?q=santa"
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`
   );
   const data = await response.json();
   const songs = data.data;
@@ -102,7 +101,6 @@ const christmasSongs = async () => {
 christmasSongs();
 
 
-christmasSongs();
 function scrolldiv() {
   var elem = document.getElementById("searchResult");
   elem.scrollIntoView();
@@ -114,4 +112,3 @@ function scrolldiv() {
 window.onload = () => {
   search();
 };
-
