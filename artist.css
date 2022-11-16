@@ -5,10 +5,6 @@
   box-sizing: border-box;
   color: white;
 }
-body {
-  height: 100vh;
-  width: 100vw;
-}
 
 #innerBody {
   height: 100%;
@@ -63,11 +59,11 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-grow: 9;
   background-image: url(https://cdn.britannica.com/83/149183-050-25913164/Queen.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -180px;
+  background-position-y: -250px;
+  height: 400px;
 }
 #user-bar {
   position: fixed;
@@ -115,7 +111,8 @@ h1 {
   background-image: linear-gradient(#5d2222, #121212 20%);
   bottom: 0;
   right: 0;
-  flex-grow: 4;
+  padding-bottom: 10em;
+  flex-grow: 1;
 }
 #followbtn {
   background-color: transparent;
@@ -136,4 +133,7 @@ footer {
   color: white;
   position: fixed;
   bottom: 0;
+}
+.card {
+  background-color: #191919;
 }
