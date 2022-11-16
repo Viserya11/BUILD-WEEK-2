@@ -1,10 +1,10 @@
 //the fetch
 
-let band = "linkin-park";
+let band = "staind";
 let url = new URLSearchParams(window.location.search);
-band = url.get("name");
 
 const getArtist = async () => {
+  band = url.get("name");
   await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/artist/${band}`
   )

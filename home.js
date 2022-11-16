@@ -5,7 +5,7 @@ const card = (
 <p>
   <a href="/album.html?albumId=${song.album.id}">${song.album.title}</a>
   <br />
-  <a href="/artist.html">${song.artist.name}</a>
+  <a href="/artist.html?name=${song.artist.name}">${song.artist.name}</a>
 </p>
 </div>`;
 
