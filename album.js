@@ -31,7 +31,38 @@ bottomalbumname.innerHTML = album.title;
 
 }
 
+async function getSongs() {
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
+const album = await response.json();
+console.log(album)
+
+const songinfo = document.querySelector('.song-info')
+songinfo.innerHTML = ""
+
+
+for (let song of album.tracks.data) {
+    songinfo.innerHTML +=`
+    
+    <div class="songrow">
+            <div class="songtitle col">
+              ${song.title}
+            </div>
+            <div class="songduration col order-5">
+              ${song.duration}
+            </div>
+            <div class="album col order-1" >
+              ${song.album.title}
+            </div>
+          </div>
+        </div>`
+}
+
+}
+
+getSongs()
+
 document.addEventListener("DOMContentLoaded", function(event) {
     getAlbum();
   });
 
+  function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
