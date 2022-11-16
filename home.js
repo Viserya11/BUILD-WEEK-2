@@ -49,20 +49,6 @@ const search = async (artist = defaultArtist) => {
     
   });
 };
-
-const getSearch = (event) => {
-  const query = document.getElementById("searchField").value;
-
-  if (query.length > 2) {
-    search(query);
-  }
-
-  defaultArtist = event.target.value;
-
-  if (event.key === "Enter" && event.target.value.length > 3) {
-    search();
-  }
-};
 let xmas = "santa"
 const christmasSongs = async (artist = xmas) => {
   const goodMorningRow = document.querySelector(".goodMorning");
@@ -72,7 +58,7 @@ const christmasSongs = async (artist = xmas) => {
   );
   const data = await response.json();
   const songs = data.data;
-  console.log(songs);
+
   goodMorningRow.classList.add = "text-center justifty-content-center";
   for (let i = 0; i < songs.length - 15; i++) {
     const song = songs[i];
@@ -94,9 +80,30 @@ const christmasSongs = async (artist = xmas) => {
     ul.innerHTML += `<li class="li-list">${song.title_short}</li>`;
     console.log(ul);
   }
-};
+}
+
 
 christmasSongs();
+
+const getSearch = (event) => {
+  const query = document.getElementById("searchField").value;
+
+  if (query.length > 2) {
+    search(query);
+  }
+
+  defaultArtist = event.target.value;
+
+  if (event.key === "Enter" && event.target.value.length > 3) {
+    search();
+  }
+};
+
+
+
+
+
+
 
 
 function scrolldiv() {
