@@ -43,6 +43,7 @@ background: linear-gradient(0deg, rgba(91,33,74,1) 0%, rgba(161,57,132,1) 100%);
 .topsecond img {
   width: 170px;
   margin-left: 20%;
+  filter: drop-shadow(-2px 6px 18px rgb(52, 50, 50));
 }
 
 .toptext {
