@@ -23,6 +23,7 @@ const gymSongs = async (artist = gym) => {
 };
 
 
+
 gymSongs()
 
 let defaultArtist ="Queen"
