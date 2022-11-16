@@ -462,3 +462,12 @@ a:hover {
   width: 20px;
   height: 20px;
 }
+
+.music-player-info{
+  font-size: 14px;
+}
+
+artist-small-player{
+  font-weight: normal;
+  font-size: 10px;
+}
