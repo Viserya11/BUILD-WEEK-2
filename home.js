@@ -8,27 +8,24 @@ const card = (
 <p>
   <a href="/album.html?albumId=${song.album.id}">${song.album.title}</a>
   <br />
-  <a href="/artist.html?name=${song.artist.name}">${song.artist.name}</a>
+  <a href="/artist.html?artistId=${song.artist.id}">${song.artist.name}</a>
 </p>
 </div>
 `;
 
 let gym = "gym";
 const gymSongs = async (artist = gym) => {
-  const response = await fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`
-  );
-  const data = await response.json();
-  const songs = data.data;
-  const gymRow = document.querySelector(".gymsongs");
+  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
+  const data = await response.json()
+  const songs = data.data
+  const gymRow = document.querySelector('.gymsongs')
 
-  for (let i = 0; i < songs.length - 15; i++) {
-    const song = songs[i];
+ for(let i =0; i < songs.length -15; i++) {
+  const song = songs[i]
     gymRow.innerHTML += card(song);
-  }
+  };
 };
 
-gymSongs();
 
 let defaultArtist = "Queen";
 
@@ -42,18 +39,18 @@ const search = async (artist = defaultArtist) => {
   const data = await response.json();
   const songs = data.data;
 
-  h2.innerText = "Results: " + artist;
-  h2.id = "searchResult";
+  h2.innerText = 'Results: ' +artist;
+  h2.id="searchResult"
+  
 
   row.innerHTML = "";
 
   songs.forEach((song) => {
     row.innerHTML += card(song);
+    
   });
 };
-
-
-let xmas = "santa";
+let xmas = "santa"
 const christmasSongs = async (artist = xmas) => {
   const goodMorningRow = document.querySelector(".goodMorning");
   const ul = document.getElementById("list");
@@ -84,7 +81,8 @@ const christmasSongs = async (artist = xmas) => {
     ul.innerHTML += `<li class="li-list">${song.title_short}</li>`;
     console.log(ul);
   }
-};
+}
+
 
 christmasSongs();
 
@@ -102,26 +100,21 @@ const getSearch = (event) => {
   }
 };
 
+
+
+
+
+
+
+
 function scrolldiv() {
   var elem = document.getElementById("searchResult");
   elem.scrollIntoView();
-  console.log(elem);
+  console.log(elem)
 }
+
+
 
 window.onload = () => {
   search();
 };
-
-// const addPlayButton = (event) => {
-//   console.log("scrolled");
-
-//   const play = document.createElement('div')
-//   play.innerHTML= `<div class="icons"><img  height="50px"class="greenplaybutton" src="/assets/Spotify-Play-Button.png"/>
-  
-//   `
-//   const cards = event.target.closest('.card')
-//   console.log(cards)
-// cards.appendChild(play)
-// }
-
-
