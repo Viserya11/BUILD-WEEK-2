@@ -100,7 +100,8 @@ footer {
     height: 9vh;
     width: 100%;
     color: #858585;
-    padding-top: 1vh;
+    text-align: center;
+    padding-top: 15px;
     position: fixed;
 }
 
@@ -398,7 +399,7 @@ hr {
   }
   .playerVolume input::-webkit-slider-thumb {
     width: 0px;
-    box-shadow: -200px 0 0 200px #ffffff;
+    box-shadow: -200px 0 0 200px #007bff;
   }
   
   .playerimg {
@@ -429,4 +430,3 @@ hr {
     display: flex;
     flex-direction: column;
   }
-
