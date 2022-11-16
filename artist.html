@@ -139,6 +139,17 @@
             <div id="mainPanel" class="jumbotron jumbotron-fluid p-0 m-0">                
                 <div class="container ml-0 p-0">
                     <div id="artistsinfo" class="px-4">
+                        
+                            <div class="d-flex align-items-center" style="gap:15px;">
+                                <div id="check-mark" style="width:10px; height:10px; background-color:white;position:relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="blue" class="bi bi-patch-check-fill" viewBox="0 0 16 16" style="position:absolute; top:-6; left:-6;">
+                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                              </svg>
+                              </div>
+                              <p class="m-0">
+                                  Verified Artist
+                                </p>
+                            </div>
                         <h1>Queen</h1>
                         <p class="lead m-0">
                          100,000,000 monthly listeners
@@ -194,14 +205,18 @@
                     <div id="popularMusic">
                         <h3>Popular</h3>
                         <ol id="popular"></ol>
-                        <h3>Popular Releases</h3>
+                        <p>See More</p>
                     </div>
                 </div>
                 <div id="smrightpanel" class="col-md-4">
                     <h3>Artist Pick</h3>
                 </div>
-                </div>
             </div>
+            <div class="container">
+            <h3>Popular Releases</h3>
+            <div id="disco" class="row row-cols-lg-5"></div>
+            </div>
+        </div>
           </div>
         </div>
         <!--Footer Thingy-->
