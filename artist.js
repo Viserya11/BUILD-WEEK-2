@@ -4,7 +4,7 @@ let band = "dj-Khaled";
 let url = new URLSearchParams(window.location.search);
 
 const getArtist = async () => {
-  band = url.get("name");
+  band = url.get("artistId");
   console.log(band);
 
   await fetch(
@@ -57,15 +57,22 @@ const getSongList = (artist) => {
       console.log(music);
       let songArray = music.data;
       const popular = document.getElementById("popular");
-      songArray.forEach((song) => {
+      let count = 0;
+      for (let i = 0; songArray.length; i++) {
+        count++;
+        //songArray.forEach((song) => {
         const li = document.createElement("li");
         li.classList.add("mb-2", "d-flex", "justify-content-between");
-        li.innerHTML = `<div class="d-flex" style="gap:10px;";><div style="width:50px; height:50px;">
-        <img src="${song.album.cover}" class="img-fluid"/></div>
-        <div class="m-0" style="display:flex; align-items:center;">${song.title_short}</div></div><div class="text-truncate" style="width:40%; display:flex; justify-content:center;">${song.album.title}</div><div>${song.duration}</div>
+        li.innerHTML = `
+        <div class="d-flex" style="gap:20px;">
+        <div class="d-flex align-items-center" style="width:10px">${count}</div>
+        <div style="width:50px; height:50px;">
+        <img src="${songArray[i].album.cover}" class="img-fluid"/>
+        </div>
+        <div class="m-0" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div><div class="text-truncate" style="width:40%; display:flex; justify-content:center;">${songArray[i].album.title}</div><div>${songArray[i].duration}</div>
         `;
         popular.appendChild(li);
-      });
+      }
       console.log(songArray);
     });
 };
