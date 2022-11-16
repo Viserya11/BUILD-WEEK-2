@@ -100,8 +100,7 @@ footer {
     height: 9vh;
     width: 100%;
     color: #858585;
-    text-align: center;
-    padding-top: 15px;
+    padding-top: 1vh;
     position: fixed;
 }
 
@@ -402,4 +401,32 @@ hr {
     box-shadow: -200px 0 0 200px #007bff;
   }
   
-  
+  .playerimg {
+    height: 7vh;
+    margin-left: 20px;
+    
+  }
+
+  .bottomsongtitle {
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+
+  .bottomalbumname {
+    color: #fff;
+    font-size: 0.7em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .footerleft {
+    display: flex;
+  }
+
+  .flexbottomtitle {
+    display: flex;
+    flex-direction: column;
+  }
+
