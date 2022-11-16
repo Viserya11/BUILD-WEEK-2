@@ -62,12 +62,12 @@ const getSearch = (event) => {
     search();
   }
 };
-
-const christmasSongs = async () => {
+let xmas = "santa"
+const christmasSongs = async (artist = xmas) => {
   const goodMorningRow = document.querySelector(".goodMorning");
   const ul = document.getElementById("list");
   const response = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/search?q=santa"
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`
   );
   const data = await response.json();
   const songs = data.data;
