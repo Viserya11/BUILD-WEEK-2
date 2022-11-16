@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const albumId = urlParams.get("album_id");
+
 const options = {
     method: "GET",
     headers: {
@@ -7,36 +10,28 @@ const options = {
 
 
 async function getAlbum() {
-const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062", options)
-const parsed = await response.json();
-console.log(parsed)
-return parsed
-}
+const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
+const album = await response.json();
+console.log(album)
 
-getAlbum()
 
-const showData = (albums) => {
+const albumPhoto = document.querySelector('.topimg')
+const albumTitle = document.querySelector('.toptext .albumtitle');
+const bandName = document.querySelector('.toptext .bandname a');
+const playerimage = document.querySelector('.playerimg')
+const bottomalbumname = document.querySelector('.bottomalbumname')
 
-    let albumPhoto = document.querySelector(".topimage")
-    let topdetails = document.querySelector(".toptext")
-    
-    albumPhoto.innerHTML = ""
-    topdetails.innerHTML = ""
-
-    for (let album of albums) {
-       albumPhoto.innerHtml +=`
-        <div class="topimage"><img src="${album.picture}" alt=""></div>
-        `
-        topdetails.innerHTML += `<p class="albumname">ALBUM</p>
-        <h1 class="albumtitle">${album.title}</h1>
-        <p class="bandname"><a href="#">${album.artist}</a></p>
-        `
-
-        
-
-   }
+albumTitle.innerHTML = album.title;
+bandName.innerHTML = album.artist.name;
+bandName.href = "artist.html?=artist_id=";
+albumPhoto.src = album.cover;
+playerimage.src = album.cover;
+bottomalbumname.innerHTML = album.title;
 
 
 }
 
-showData(albums)
+document.addEventListener("DOMContentLoaded", function(event) {
+    getAlbum();
+  });
+
