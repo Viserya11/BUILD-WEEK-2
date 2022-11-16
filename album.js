@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const albumId = urlParams.get("album_id");
+function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
 const options = {
     method: "GET",
@@ -48,7 +49,7 @@ for (let song of album.tracks.data) {
               ${song.title}
             </div>
             <div class="songduration col order-5">
-              ${song.duration}
+            ${fmtMSS(song.duration)}
             </div>
             <div class="album col order-1" >
               ${song.album.title}
@@ -65,4 +66,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getAlbum();
   });
 
-  function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
+ 
