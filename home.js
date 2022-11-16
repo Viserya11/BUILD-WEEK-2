@@ -1,6 +1,6 @@
 const card = (
   song
-) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards">
+) => `<div class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards ">
 <img class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" />
 <p>
   <a href="/album.html?albumId=${song.album.id}">${song.album.title}</a>
@@ -59,7 +59,7 @@ const christmasSongs = async () => {
 
     goodMorningRow.innerHTML += `<div class="col-5  col-lg-2  goodMorningDivs m-2 mb-5">
 <div class="img-div">
- <img class="  " src="${song.album.cover_medium}" alt="img placeholder" height="80px"  />
+ <img class="  " src="${song.album.cover_medium}" alt="img placeholder" height="60px"  />
  </div>
 
 <div class="text-div">

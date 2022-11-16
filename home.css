@@ -103,10 +103,12 @@ ul {
     padding-right: 200px;
     
   }
-}
+
+  
 
 .topbar{
   height: 100px;
+}
 }
 
 @media (min-width: 768px) {
@@ -322,15 +324,16 @@ ul {
 }
 
 .dark-cards {
-  background-color: #181818;
+  background-color: #292929;
 }
 
 .goodMorningDivs {
   width: 300px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.179);
+  height: 60px;
+  background-color: #e9e4e453;
   border-radius: 5px;
   position: relative;
+  font-size: 14px;
 }
 
 a {
@@ -349,7 +352,7 @@ a {
 
 .text-div {
   position: absolute;
-  left: 90px;
+  left: 60px;
 }
 .login-div {
   width: 100%;
@@ -396,7 +399,7 @@ a:hover {
 .topbar {
   display: flex;
   justify-content: space-between;
-  background-color: #101010;
+  background-color: #101010e8;
   padding: 14px 30px;
   width: 100%;
 }
@@ -471,3 +474,4 @@ artist-small-player{
   font-weight: normal;
   font-size: 10px;
 }
+
