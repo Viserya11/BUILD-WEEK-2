@@ -133,7 +133,7 @@ p {
     margin-left: 0px;
     height: 62vh;
     background-color: #000000; 
-    overflow: scroll;
+    overflow: auto;
     
 }
 
