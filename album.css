@@ -434,7 +434,7 @@ margin-top: 15px;
 .songrow {
   display: flex;
   flex: row;
-  margin-bottom: 20px;
+  padding: 10px;
   justify-content: space-between;
   width: 100vw;
 }
@@ -456,6 +456,13 @@ margin-top: 15px;
 
 .songtitle {
   font-weight: bold;
+}
+
+
+.songrow:hover {
+  backdrop-filter: invert(13%);
+  -webkit-filter: invert(13%);
+  -moz-filter: invert(13%);
 }
 
 /*@media only screen and (max-width: 768px) {
