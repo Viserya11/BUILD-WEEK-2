@@ -62,7 +62,7 @@ const getSongList = (artist) => {
         count++;
         //songArray.forEach((song) => {
         const li = document.createElement("li");
-        li.classList.add("d-flex", "justify-content-between");
+        li.classList.add("d-flex", "justify-content-between", "greenlist");
         li.innerHTML = `
           <div class="d-flex" style="gap:20px;">
           <div class="d-flex align-items-center tinynum" style="width:10px; position:relative;">
@@ -90,6 +90,7 @@ const getSongList = (artist) => {
   </div>
   `;
         popular.appendChild(li);
+        getBtns();
       }
       console.log(songArray);
     });
@@ -172,15 +173,33 @@ pausebtn.addEventListener("click", displayPlay);
 
 //little play button
 
-const littlePlaybtn = document.querySelectorAll("tinyplay");
-
 const setToPlay = (event) => {
   const sisterDiv = document.getElementById("artistfooter");
+  const selected = event.target;
+  const li = document.querySelectorAll(".greenlist");
+
+  selected.classList.toggle("spotifygreen");
   //const title = event.target;
   const img = document.createElement("img");
 
-  console.log("hi");
+  console.log(event.target);
 };
-for (let i = 0; i < littlePlaybtn.length; i++) {
-  littlePlaybtn[i].addEventListener("click", setToPlay);
-}
+
+const getBtns = () => {
+  const littlePlaybtn = document.querySelectorAll("li");
+
+  for (let i = 0; i < littlePlaybtn.length; i++) {
+    littlePlaybtn[i].addEventListener("click", setToPlay);
+  }
+};
+
+//trying color change on scroll
+window.onscroll = function (event) {
+  let topbar = document.getElementById("user-bar");
+  let scroll = window.pageYOffset;
+  if (scroll < 100) {
+    topbar.style.backgroundColor = "transparent";
+  } else if (scroll >= 300) {
+    topbar.style.backgroundColor = "#5d2222";
+  }
+};

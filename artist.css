@@ -21,6 +21,13 @@ body {
 }
 #sidePanel {
   background-color: #121212;
+  color: rgba(255, 255, 255, 0.685);
+}
+#sidePanel a {
+  color: rgba(255, 255, 255, 0.409);
+  transition: color 0.3s ease-in-out;
+}
+#sidePanel a:hover {
   color: white;
 }
 #sidePanel > div {
@@ -72,9 +79,10 @@ body {
   color: white;
   position: fixed;
   top: 0;
-  width: 75%;
+  width: 100%;
   padding: 1em 0;
   z-index: 3;
+  transition: background 0.3s ease;
 }
 #arrows {
   width: 7%;
@@ -106,7 +114,7 @@ body {
   /*padding-top: 12rem;*/
   /*position: absolute;
   bottom: 0;*/
-  height: 400px;
+  height: 390px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -220,4 +228,7 @@ footer {
 }
 .hidden {
   display: none;
+}
+.spotifygreen {
+  color: #1db954;
 }
