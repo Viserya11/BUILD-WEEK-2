@@ -146,15 +146,25 @@ h1 {
   background-color: transparent;
   color: white;
   padding: 0 1em;
-  border: solid rgba(255, 255, 255, 0.532) 1pt;
+  border: solid rgba(255, 255, 255, 0.532) 0.5pt;
+}
+#followbtn:hover {
+  border: solid rgb(255, 255, 255) 0.5pt;
 }
 #ellip {
   color: rgba(255, 255, 255, 0.532);
+}
+#ellip:hover {
+  color: white;
 }
 
 h3 {
   color: white;
 }
+.favoriteheart {
+  visibility: hidden;
+}
+
 .tinyplay {
   visibility: hidden;
 }
@@ -173,6 +183,9 @@ h3 {
 #popular li:hover {
   background-color: #595959;
   /*color: #1db954;*/
+}
+#popular li:hover .favoriteheart {
+  visibility: visible;
 }
 #popular li:hover .tinyplay {
   visibility: visible;
