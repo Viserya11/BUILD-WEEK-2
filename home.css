@@ -517,8 +517,8 @@ visibility: visible;
 position: absolute;
   height:61px;
   width:65px;
-  bottom:1px;
- right:130px;
+  bottom:110px;
+ right:120px;
  display: block;
  transition: .4s;
  cursor: pointer;
@@ -538,3 +538,5 @@ position: absolute;
     opacity: 1;
   }
 }
+
+
