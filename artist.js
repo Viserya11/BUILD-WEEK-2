@@ -64,31 +64,31 @@ const getSongList = (artist) => {
         const li = document.createElement("li");
         li.classList.add("d-flex", "justify-content-between");
         li.innerHTML = `
-        <div class="d-flex" style="gap:20px;">
-        <div class="d-flex align-items-center tinynum" style="width:10px; position:relative;">
-        <div class="tinyplay" style="position:absolute; left:-10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-</svg>
-        </div>
-        ${count}</div>
-        <div style="width:50px; height:50px;">
-        <img src="${songArray[i].album.cover}" class="img-fluid"/>
-        </div>
-        <div class="m-0" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div>
-        <div class="text-truncate" style="width:40%; display:flex; justify-content:center; align-items:center">${songArray[i].album.title}</div>
-        <div class="d-flex align-items-center">
-        <div class='favoriteheart mr-5'>
-        <i class="fa-regular fa-heart"></i>
-        </div>
-        ${songArray[i].duration}
-        <div class="d-flex align-items-center pl-3 tinyellip">
+          <div class="d-flex" style="gap:20px;">
+          <div class="d-flex align-items-center tinynum" style="width:10px; position:relative;">
+          <div class="tinyplay" style="position:absolute; left:-10px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+          </svg>
+          </div>
+          ${count}</div>
+          <div style="width:50px; height:50px;">
+          <img src="${songArray[i].album.cover}" class="img-fluid"/>
+          </div>
+          <div class="m-0" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div>
+          <div class="text-truncate" style="width:40%; display:flex; justify-content:center; align-items:center">${songArray[i].album.title}</div>
+          <div class="d-flex align-items-center">
+          <div class='favoriteheart mr-5'>
+          <i class="fa-regular fa-heart"></i>
+          </div>
+          ${songArray[i].duration}
+          <div class="d-flex align-items-center pl-3 tinyellip">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-</svg>
-        <div>
-        </div>
-        `;
+  </svg>
+  <div>
+  </div>
+  `;
         popular.appendChild(li);
       }
       console.log(songArray);
@@ -110,11 +110,11 @@ const getAlbums = (artist) => {
         const div = document.createElement("div");
         div.classList.add("col");
         div.innerHTML = `<div class="card p-3 rounded">
-          <img src="${album.album.cover_xl}" class="card-img-top rounded" alt="..." style="box-shadow:black 0px 0px 15px;">
-          <div class="card-body">
-            <p class="card-text text-truncate">${album.album.title}</p>
-            <p class="card-text">ID: ${album.album.id}</p>
-          </div>
+        <img src="${album.album.cover_xl}" class="card-img-top rounded" alt="..." style="box-shadow:black 0px 0px 15px;">
+        <div class="card-body">
+        <p class="card-text text-truncate">${album.album.title}</p>
+        <p class="card-text">ID: ${album.album.id}</p>
+        </div>
         </div>`;
         popularReleases.appendChild(div);
       });
@@ -142,11 +142,11 @@ const getArtistPick = (artist) => {
       inside.style.fontSize = "10pt";
       inside.style.fontWeight = "bold";
       inside.innerHTML = `
-      <div style="width:84px; height:84px;"><img src="${albums[2].cover_xl}" class="img-fluid"/></div>
-      <div id="artistpickstuff">
-          <div class="d-flex" style="gap:5px;"><div style="width:20px; height:20px;"><img src="${artist.picture_xl}" class="rounded-circle img-fluid"/></div><p class="m-0">posted By ${artist.name}</p></div>
-          <a href="#"><p class="m-0">${albums[2].title}</p></a>
-          <p class="m-0">Album</p>`;
+        <div style="width:84px; height:84px;"><img src="${albums[2].cover_xl}" class="img-fluid"/></div>
+        <div id="artistpickstuff">
+      <div class="d-flex" style="gap:5px;"><div style="width:20px; height:20px;"><img src="${artist.picture_xl}" class="rounded-circle img-fluid"/></div><p class="m-0">posted By ${artist.name}</p></div>
+      <a href="#"><p class="m-0">${albums[2].title}</p></a>
+      <p class="m-0">Album</p>`;
       artistPick.appendChild(inside);
     });
 };
@@ -169,3 +169,18 @@ const displayPause = () => {
 
 playbtn.addEventListener("click", displayPause);
 pausebtn.addEventListener("click", displayPlay);
+
+//little play button
+
+const littlePlaybtn = document.querySelectorAll("tinyplay");
+
+const setToPlay = (event) => {
+  const sisterDiv = document.getElementById("artistfooter");
+  //const title = event.target;
+  const img = document.createElement("img");
+
+  console.log("hi");
+};
+for (let i = 0; i < littlePlaybtn.length; i++) {
+  littlePlaybtn[i].addEventListener("click", setToPlay);
+}
