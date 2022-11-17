@@ -13,24 +13,25 @@ const card = (
 </div>
 `;
 
-let gym = 'gym'
+let gym = "gym";
 const gymSongs = async (artist = gym) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
-  const data = await response.json()
-  const songs = data.data
-  const gymRow = document.querySelector('.gymsongs')
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`
+  );
+  const data = await response.json();
+  const songs = data.data;
+  const gymRow = document.querySelector(".gymsongs");
 
- for(let i =0; i < songs.length -15; i++) {
-  const song = songs[i]
+  for (let i = 0; i < songs.length - 15; i++) {
+    const song = songs[i];
+    console.log(song);
     gymRow.innerHTML += card(song);
-  };
+  }
 };
 
+gymSongs();
 
-
-gymSongs()
-
-let defaultArtist ="Queen"
+let defaultArtist = "Queen";
 
 const search = async (artist = defaultArtist) => {
   const row = document.querySelector("#results .row");
@@ -42,19 +43,16 @@ const search = async (artist = defaultArtist) => {
   const data = await response.json();
   const songs = data.data;
 
-  h2.innerText = 'Results: ' +artist;
-  h2.id="searchResult"
-  
+  h2.innerText = "Results: " + artist;
+  h2.id = "searchResult";
 
   row.innerHTML = "";
 
   songs.forEach((song) => {
-    
     row.innerHTML += card(song);
-    
   });
 };
-let xmas = "santa"
+let xmas = "santa";
 const christmasSongs = async (artist = xmas) => {
   const goodMorningRow = document.querySelector(".goodMorning");
   const ul = document.getElementById("list");
@@ -85,8 +83,7 @@ const christmasSongs = async (artist = xmas) => {
     ul.innerHTML += `<li class="li-list">${song.title_short}</li>`;
     console.log(ul);
   }
-}
-
+};
 
 christmasSongs();
 
@@ -104,21 +101,40 @@ const getSearch = (event) => {
   }
 };
 
-
-
-
-
-
-
-
 function scrolldiv() {
   var elem = document.getElementById("searchResult");
   elem.scrollIntoView();
-  console.log(elem)
+  console.log(elem);
 }
-
-
 
 window.onload = () => {
   search();
 };
+
+
+const checkData = () => {
+  const getUsername = localStorage.getItem("username");
+  const getPassword = localStorage.getItem("password");
+  const topbar = document.getElementById("topbar");
+  const newTopbar = document.getElementById("newTopbar");
+  const usernameDiv = document.getElementById("usernameDiv");
+
+  const margin = document.getElementById('margin-div')
+
+  console.log(getPassword);
+  console.log(getUsername);
+  if (getUsername === "") {
+    topbar.style.display = "inline";
+    newTopbar.style.display = "none";
+    usernameDiv.style.display = "none";
+    margin.style.display = "none";
+    annoyingRow.classList.add("background-color-row");
+  } else {
+    topbar.style.display = "none";
+    newTopbar.style.display = "inline";
+    newTopbar.innerHTML += ` <div class="account-dropdown-nav-item dropdown newdropdown loginName">
+    <div><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"></path><img class="spotify-logo-mobile" height="50px" src="./logo/Spotify_Logo.png"/><div>
+  <a class="account-dropdown-nav-link newdropdown-2 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">${getUsername}</a></div>`;
+  }
+};
+checkData();

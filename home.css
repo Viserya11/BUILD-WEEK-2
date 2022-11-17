@@ -14,7 +14,7 @@ body {
     #121212,
     #121212
   );
-
+ 
   margin: 0;
   max-width: 100%;
 }
@@ -120,6 +120,11 @@ ul {
   .spotify-navbar-mobile{
     display: none;
   }
+
+  .spotify-logo-mobile{
+   display: none;
+  }
+  
 }
 
 
@@ -374,10 +379,6 @@ a {
   background-color: rgba(255, 255, 255, 0.179);
 }
 
-.boris-photo {
-  height: 25px;
-  border-radius: 20px;
-}
 #results {
   width: 100%;
 }
@@ -401,9 +402,10 @@ a:hover {
 .topbar {
   display: flex;
   justify-content: space-between;
-  background-color: #101010e8;
+  background-color: #101010c3;
   padding: 14px 30px;
   width: 100%;
+  
 }
 .topbar .prev-next-buttons button {
   color: #7a7a7a;
@@ -539,5 +541,80 @@ position: absolute;
   }
 }
 
+.card{
+  max-height: 400px;
+}
+
+.songCards{
+  max-height: 400px;
+}
 
 
+/* 
+.newdropdown{
+  list-style-type: none;
+  margin-top: 15px;
+  width:30px;
+  display: flex;
+  justify-content: space-between;
+  }
+   /* */
+   /*
+  .newdropdown2 {
+    background-color: #18181880;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+  
+    text-decoration: none;
+    color: #fff;
+    
+  } */ 
+
+  #newTopbar{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right:20px;
+    font-size: 14px;
+    
+   
+   
+  }
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  margin-right:20px;
+  
+  font-size: 5px;
+  
+}
+
+.prev-next-buttons{
+  display: none;
+}
+
+.loginName{
+  background-color: rgba(0, 0, 0, 0.534);
+  width:110px;
+display: flex;
+  height:35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  
+  
+}
+
+
+.spotify-logo-mobile{
+  position: absolute;
+  right:280px;
+  top:-2px
+}
+
+
+.ul-font{
+  font-size: 18px;
+}

@@ -7,12 +7,13 @@
   <script src="https://kit.fontawesome.com/1205482781.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet"  href="home.css" />
-  <title>Home</title>
+  <title id="storage">Homes</title>
 </head>
 
 <body>
+  
   <div class="container-fluid">
-    <div class="row">
+    <div class="row annoyingRow">
     
       <div class="col-2">
         <nav class="navbar navbar-expand-md navbar-white bg-navbar fixed-left justify-content-between" id="sidebar">
@@ -26,9 +27,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <ul>
+                <ul class="ul-font">
                   <li>
-                    <a class="nav-item nav-link" href="home.html"><i class=""></i>
+                    <a  class="nav-item nav-link" href="home.html"><i class=""></i>
                       <img class="navbar-icons" src="171424_home_house_icon.png"/>  Home
                     </a>
                   </li>
@@ -87,7 +88,14 @@
            
         </nav>
       </div>
-      <div class="topbar">
+      <div class="mb-2" id="margin-div"></div>
+      <div id="newTopbar" class="d-flex  ">
+        <div id="usernameDiv" class=""></div> 
+
+
+      </div>
+
+      <div id="topbar" class="topbar">
         <div class="spotify-navbar-mobile"> 
           <img height="50px" src="/logo/Spotify_Logo.png">
         </div>
@@ -209,7 +217,7 @@
                   <p>
                     <a href="album.html">Album Title</a>
                     <br />
-                    <a href="artist.html"">Artist Name</a>
+                    <a href="artist.html">Artist Name</a>
                   </p>
                 </div>
                 <div class="col text-center">
@@ -260,7 +268,7 @@
   </div>
   
 
-  <div class="player container-fluid fixed-bottom bg-container pt-1 bottom-container music-player-info col-12">
+  <div class="player  fixed-bottom bg-container pt-1 bottom-container music-player-info col-12 ">
     <div class="row flex-nowrap  playBar py-3">
       <div class="col-">
         <div class="playerArtistInfo d-flex">
@@ -315,7 +323,7 @@
       </div>
     </div>
   </div>
-  </html.>
+  </html>
   
 <script src="home.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
