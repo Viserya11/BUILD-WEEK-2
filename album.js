@@ -66,4 +66,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getAlbum();
   });
 
+  //play pause btns
+const playbtn = document.getElementById("play");
+const pausebtn = document.getElementById("pause");
+
+const displayPlay = () => {
+  pausebtn.style.display = null;
+  pausebtn.classList.add("hidden");
+  playbtn.classList.remove("hidden");
+};
+
+const displayPause = () => {
+  playbtn.classList.add("hidden");
+  pausebtn.classList.remove("hidden");
+  pausebtn.style.display = "flex";
+};
+
+playbtn.addEventListener("click", displayPause);
+pausebtn.addEventListener("click", displayPlay);
+
+//little play button
+
+const littlePlaybtn = document.querySelectorAll("tinyplay");
+
+const setToPlay = (event) => {
+  const sisterDiv = document.getElementById("artistfooter");
+  //const title = event.target;
+  const img = document.createElement("img");
+
+  console.log("hi");
+};
+for (let i = 0; i < littlePlaybtn.length; i++) {
+  littlePlaybtn[i].addEventListener("click", setToPlay);
+}
  
