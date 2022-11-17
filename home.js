@@ -13,7 +13,7 @@ const card = (
 </div>
 `;
 
-let gym = "gym";
+let gym = 'gym'
 const gymSongs = async (artist = gym) => {
   const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
   const data = await response.json()
@@ -27,7 +27,10 @@ const gymSongs = async (artist = gym) => {
 };
 
 
-let defaultArtist = "Queen";
+
+gymSongs()
+
+let defaultArtist ="Queen"
 
 const search = async (artist = defaultArtist) => {
   const row = document.querySelector("#results .row");
@@ -46,6 +49,7 @@ const search = async (artist = defaultArtist) => {
   row.innerHTML = "";
 
   songs.forEach((song) => {
+    
     row.innerHTML += card(song);
     
   });
