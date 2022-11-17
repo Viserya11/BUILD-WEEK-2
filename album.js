@@ -44,7 +44,7 @@ songinfo.innerHTML = ""
 for (let song of album.tracks.data) {
     songinfo.innerHTML +=`
     
-    <div class="songrow">
+    <div class="songrow" onclick="passDetails()">
             <div class="songtitle col">
               ${song.title}
             </div>
@@ -67,3 +67,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
  
+async function passDetails() {
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
+const album = await response.json();
+console.log(album)
+
+const playertitle = document.querySelector(".bottomsongtitle")
+const songduration = document.querySelector(".duration")
+
+
+for (let song of album.tracks.data) {
+    playertitle.innerHTML =`<p class="bottomsongtitle">${song.title}</p>`
+    songduration.innerHTML = `<span class="duration">${fmtMSS(song.duration)}</span>`
+
+}
+
+}
+
+
+
+
+
