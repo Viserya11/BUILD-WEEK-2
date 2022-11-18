@@ -1,5 +1,14 @@
-//the fetch
+const checkData = () => {
+  const getUsername = localStorage.getItem("username");
+  const getPassword = localStorage.getItem("password");
 
+  const userName = document.getElementById("username");
+  userName.innerText = getUsername;
+};
+
+checkData();
+
+//the fetch
 let band = "dj-Khaled";
 let url = new URLSearchParams(window.location.search);
 
