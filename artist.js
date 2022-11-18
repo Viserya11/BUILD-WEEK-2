@@ -192,8 +192,14 @@ const setToPlay = (event) => {
   //target specific li element
   const selected = event.target.closest("li");
 
-  //turns selected green
-  selected.classList.toggle("spotifygreen");
+  //turns selected green and remove green
+  const littlePlaybtn = document.querySelectorAll("li");
+
+  for (let i = 0; i < littlePlaybtn.length; i++) {
+    littlePlaybtn[i].classList.remove("spotifygreen");
+  }
+
+  selected.classList.add("spotifygreen");
 
   //uses dataset to retrieve the correct info and send it to the correct place
   img.src = selected.dataset.img;
@@ -211,7 +217,6 @@ const setToPlay = (event) => {
 
 const getBtns = () => {
   const littlePlaybtn = document.querySelectorAll("li");
-
   for (let i = 0; i < littlePlaybtn.length; i++) {
     littlePlaybtn[i].addEventListener("click", setToPlay);
   }
