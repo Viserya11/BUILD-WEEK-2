@@ -81,6 +81,10 @@ const audio = document.querySelector("#audio")
     songduration.innerHTML = `<span class="duration">${fmtMSS(duration)}</span>`
     audio.src = preview
     audio.play()
+
+   //const title = document.querySelector('.songrow')
+   //title.classList.add("greentext")
+    
 }
 
 
