@@ -458,6 +458,10 @@ margin-top: 15px;
   font-weight: bold;
 }
 
+.songtitle:hover {
+  cursor: pointer;
+}
+
 .titleinfo {
   margin-left: 10px;
 }
