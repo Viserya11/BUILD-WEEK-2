@@ -45,7 +45,7 @@ songinfo.innerHTML = ""
 for (i=0; i < album.tracks.data.length; i++) {
     songinfo.innerHTML +=`
     
-    <div class="songrow" onclick="passDetails('${album.tracks.data[i].title}', '${album.tracks.data[i].duration}', '${album.tracks.data[i].preview}' )">
+    <div class="songrow" onclick="passDetails('${album.tracks.data[i].title}', '${album.tracks.data[i].duration}', '${album.tracks.data[i].preview}', event )">
             <div class="songtitle col">
               <span class="songnumber">${i+1}</span>${album.tracks.data[i].title}
             </div>
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
  
-async function passDetails(songtitle, duration, preview) {
+async function passDetails(songtitle, duration, preview, event) {
     const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
 const album = await response.json();
 console.log(album)
@@ -82,8 +82,16 @@ const audio = document.querySelector("#audio")
     audio.src = preview
     audio.play()
 
-   //const title = document.querySelector('.songrow')
-   //title.classList.add("greentext")
+    
+    let green = document.querySelectorAll(".greentext")
+
+    for (i=0; i < green.length; i++) {
+        green[i].classList.remove("greentext")
+    }
+   
+    event.target.classList.add("greentext")
+  
+  
     
 }
 
