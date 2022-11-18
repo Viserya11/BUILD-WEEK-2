@@ -177,27 +177,44 @@ const getArtistPick = (artist) => {
 //play pause btns
 const playbtn = document.getElementById("play");
 const pausebtn = document.getElementById("pause");
+const miniPlaybtn = document.getElementById("miniplay");
+const miniPausebtn = document.getElementById("minipause");
 
 const displayPlay = () => {
   pausebtn.style.display = null;
+  miniPausebtn.style.display = null;
+
   pausebtn.classList.add("hidden");
+  miniPausebtn.classList.add("hidden");
+
   playbtn.classList.remove("hidden");
+  miniPlaybtn.classList.remove("hidden");
+
   audio.pause();
 };
 
 const displayPause = () => {
   playbtn.classList.add("hidden");
+  miniPlaybtn.classList.add("hidden");
+
   pausebtn.classList.remove("hidden");
+  miniPausebtn.classList.remove("hidden");
+
   pausebtn.style.display = "flex";
+
   audio.play();
 };
 
 playbtn.addEventListener("click", displayPause);
+miniPlaybtn.addEventListener("click", displayPause);
+
 pausebtn.addEventListener("click", displayPlay);
+miniPausebtn.addEventListener("click", displayPlay);
 
 //li set to play
 
 const setToPlay = (event) => {
+  displayPause();
   const img = document.getElementById("smalbumpic");
   const musicInfo = document.querySelector(".music-player-info");
   const artistInfo = document.querySelector(".artist-small-player");
