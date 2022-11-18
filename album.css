@@ -466,6 +466,10 @@ margin-top: 15px;
   cursor: pointer;
 }
 
+.songtitle::selection {
+  color: rgb(18, 113, 53);
+}
+
 .titleinfo {
   margin-left: 10px;
 }
