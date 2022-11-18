@@ -182,12 +182,14 @@ const displayPlay = () => {
   pausebtn.style.display = null;
   pausebtn.classList.add("hidden");
   playbtn.classList.remove("hidden");
+  audio.pause();
 };
 
 const displayPause = () => {
   playbtn.classList.add("hidden");
   pausebtn.classList.remove("hidden");
   pausebtn.style.display = "flex";
+  audio.play();
 };
 
 playbtn.addEventListener("click", displayPause);
