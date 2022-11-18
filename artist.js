@@ -8,6 +8,11 @@ const checkData = () => {
 
 checkData();
 
+//translate time
+function fmtMSS(s) {
+  return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + s;
+}
+
 //the fetch
 let band = "dj-Khaled";
 let url = new URLSearchParams(window.location.search);
@@ -75,6 +80,7 @@ const getSongList = (artist) => {
         li.dataset.img = `${songArray[i].album.cover}`;
         li.dataset.song = `${songArray[i].title_short}`;
         li.dataset.artistName = `${artist.name}`;
+        li.dataset.audio = `${songArray[i].preview}`;
         li.innerHTML = `
           <div class="d-flex" style="gap:20px;">
           <div class="d-flex align-items-center tinynum" style="width:10px; position:relative;">
@@ -87,13 +93,17 @@ const getSongList = (artist) => {
           <div style="width:50px; height:50px;">
           <img src="${songArray[i].album.cover}" class="img-fluid"/>
           </div>
-          <div class="m-0 littletitle" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div>
-          <div class="text-truncate" style="width:40%; display:flex; justify-content:center; align-items:center">${songArray[i].album.title}</div>
+          <div class="m-0 littletitle" style="display:flex; align-items:center;">${
+            songArray[i].title_short
+          }</div></div>
+          <div class="text-truncate" style="width:40%; display:flex; justify-content:center; align-items:center">${
+            songArray[i].album.title
+          }</div>
           <div class="d-flex align-items-center">
-          <div class='favoriteheart mr-5'>
+          <div class='favoriteheart mr-2'>
           <i class="fa-regular fa-heart"></i>
           </div>
-          ${songArray[i].duration}
+          ${fmtMSS(songArray[i].duration)}
           <div class="d-flex align-items-center pl-3 tinyellip">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
@@ -122,13 +132,13 @@ const getAlbums = (artist) => {
       array.forEach((album) => {
         const div = document.createElement("div");
         div.classList.add("col");
-        div.innerHTML = `<div class="card p-3 rounded">
+        div.innerHTML = `<a href="album.html?albumId=${album.album.id}"><div class="card p-3 rounded">
         <img src="${album.album.cover_xl}" class="card-img-top rounded" alt="..." style="box-shadow:black 0px 0px 15px;">
         <div class="card-body">
         <p class="card-text text-truncate">${album.album.title}</p>
         <p class="card-text">ID: ${album.album.id}</p>
         </div>
-        </div>`;
+        </div></a>`;
         popularReleases.appendChild(div);
       });
       //console.log(moresongsArray);
@@ -155,7 +165,7 @@ const getArtistPick = (artist) => {
       inside.style.fontSize = "10pt";
       inside.style.fontWeight = "bold";
       inside.innerHTML = `
-        <div style="width:84px; height:84px;"><img src="${albums[2].cover_xl}" class="img-fluid"/></div>
+        <a href="album.html?albumId=${albums[2].id}"><div style="width:84px; height:84px;"><img src="${albums[2].cover_xl}" class="img-fluid"/></div></a>
         <div id="artistpickstuff">
       <div class="d-flex" style="gap:5px;"><div style="width:20px; height:20px;"><img src="${artist.picture_xl}" class="rounded-circle img-fluid"/></div><p class="m-0">posted By ${artist.name}</p></div>
       <a href="#"><p class="m-0">${albums[2].title}</p></a>
@@ -205,14 +215,12 @@ const setToPlay = (event) => {
   img.src = selected.dataset.img;
   musicInfo.innerText = selected.dataset.song;
   artistInfo.innerText = selected.dataset.artistName;
+  audio.src = selected.dataset.audio;
 
-  const littleTitle = document.querySelector(".music-player-info");
-
-  //littleTitle.innerText = selected.innerText;
-
+  audio.play();
   //const title = event.target;
 
-  console.log(selected.dataset.img);
+  console.log(selected.dataset.audio);
 };
 
 const getBtns = () => {
