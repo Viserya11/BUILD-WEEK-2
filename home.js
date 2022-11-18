@@ -1,7 +1,7 @@
 const card = (
   song
 ) => `<div   class="col-12 col-md-3 col-lg-2 card  m-2 text-center dark-cards SongCards ">
-<img  class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" />
+<a href="/album.html?albumId=${song.album.id}"><img  class="img-fluid" src="${song.album.cover_xl}" alt="img placeholder" /></a>
 
 <img class="playButtonCard"src="./assets/Spotify-Play-Button.png" 
 
