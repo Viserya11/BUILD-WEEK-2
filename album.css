@@ -458,11 +458,18 @@ margin-top: 15px;
   font-weight: bold;
 }
 
+.titleinfo {
+  margin-left: 10px;
+}
 
 .songrow:hover {
   backdrop-filter: invert(13%);
   -webkit-filter: invert(13%);
   -moz-filter: invert(13%);
+}
+
+.songnumber {
+  margin-right: 10px;
 }
 
 /*@media only screen and (max-width: 768px) {

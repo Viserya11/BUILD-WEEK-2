@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const albumId = urlParams.get("albumId");
 function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
+
 const options = {
     method: "GET",
     headers: {
@@ -41,18 +42,18 @@ const songinfo = document.querySelector('.song-info')
 songinfo.innerHTML = ""
 
 
-for (let song of album.tracks.data) {
+for (i=0; i < album.tracks.data.length; i++) {
     songinfo.innerHTML +=`
     
-    <div class="songrow" onclick="passDetails()">
+    <div class="songrow" onclick="passDetails('${album.tracks.data[i].title}', '${album.tracks.data[i].duration}', '${album.tracks.data[i].preview}' )">
             <div class="songtitle col">
-              ${song.title}
+              <span class="songnumber">${i+1}</span>${album.tracks.data[i].title}
             </div>
             <div class="songduration col order-5">
-            ${fmtMSS(song.duration)}
+            ${fmtMSS(album.tracks.data[i].duration)}
             </div>
             <div class="album col order-1" >
-              ${song.album.title}
+              ${album.tracks.data[i].title}
             </div>
           </div>
         </div>`
@@ -67,22 +68,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
  
-async function passDetails() {
+async function passDetails(songtitle, duration, preview) {
     const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
 const album = await response.json();
 console.log(album)
 
 const playertitle = document.querySelector(".bottomsongtitle")
 const songduration = document.querySelector(".duration")
+const audio = document.querySelector("#audio")
 
-
-for (let song of album.tracks.data) {
-    playertitle.innerHTML =`<p class="bottomsongtitle">${song.title}</p>`
-    songduration.innerHTML = `<span class="duration">${fmtMSS(song.duration)}</span>`
-
+    playertitle.innerHTML =`<p class="bottomsongtitle">${songtitle}</p>`
+    songduration.innerHTML = `<span class="duration">${fmtMSS(duration)}</span>`
+    audio.src = preview
+    audio.play()
 }
 
-}
 
 
 
