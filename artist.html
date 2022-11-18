@@ -21,7 +21,7 @@
       <!--left panel-->
       <div id="top" class="row">
         <div id="sidePanel" class="d-none d-md-block d-lg-block col-md-2 m-0 pl-3 pr-0">
-            <nav class="navbar navbar-expand-md navbar-white bg-navbar justify-content-between" id="sidebar">
+            <nav class="navbar navbar-expand-md navbar-white bg-navbar justify-content-between fixed-left" id="sidebar">
               <div class="nav-container">
                 <a class="navbar-brand" href="/home.html">
                   <img src="logo/Spotify_Logo.png" alt="Spotify_Logo" width="131" height="40" />
@@ -163,14 +163,14 @@
                     </div>
                 </div>
                 <div class="row px-4 mt-4">
-                <div id="pageCategories" class="col-md-9">
+                <div id="pageCategories" class="col-md-8 px-0">
                     <div id="popularMusic">
                         <h3>Popular</h3>
                         <ol id="popular"></ol>
                         <p>See More</p>
                     </div>
                 </div>
-                <div id="smrightpanel" class="col-md-3">
+                <div id="smrightpanel" class="col-md-4">
                     <h3>Artist Pick</h3>
                 </div>
             </div>
@@ -185,10 +185,11 @@
         <footer id="bottom" class="m-0 justify-content-between">
           <div class="row flex-nowrap  playBar py-3">
             <div class="col-auto">
-              <div class="playerArtistInfo d-flex" style="height:50px; width:50px">
-                <!--<img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Another_one_bites_the_dust.jpg"/>-->
+              <div class="playerArtistInfo d-flex" style="height:50px;">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Another_one_bites_the_dust.jpg" id="smalbumpic"/>
                 <div id='artistfooter' class="d-flex flex-column pl-2 ">
-                  <h6 class="music-player-info">Another One Bites The Dust<br><span class="artist-small-player">Queen</span></h6>
+                  <h6 class="music-player-info">Another One Bites The Dust</h6>
+                  <p class="artist-small-player">Queen</p>
                 
                   
                 </div>

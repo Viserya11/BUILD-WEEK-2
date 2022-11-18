@@ -16,11 +16,10 @@ body {
 }
 
 #top {
-  background-color: blue;
   flex-grow: 11;
 }
 #sidePanel {
-  background-color: #121212;
+  background-color: black;
   color: rgba(255, 255, 255, 0.685);
 }
 #sidePanel a {
@@ -136,6 +135,7 @@ h1 {
   background-color: #1db954;
   color: black;
   justify-content: center;
+  user-select: none;
   align-items: center;
   border-radius: 50%;
 }
@@ -182,11 +182,13 @@ h3 {
 .tinyellip {
   visibility: hidden;
 }
+#popular {
+  padding: 0;
+}
 
 #popular li {
   padding: 0.5em 1em;
   border-radius: 10px;
-  color: white;
 }
 #popular li:hover {
   background-color: #595959;
@@ -215,6 +217,7 @@ footer {
   color: white;
   position: fixed;
   bottom: 0;
+  z-index: 1;
 }
 .card {
   background-color: #191919;

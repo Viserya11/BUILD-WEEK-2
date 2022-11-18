@@ -63,6 +63,9 @@ const getSongList = (artist) => {
         //songArray.forEach((song) => {
         const li = document.createElement("li");
         li.classList.add("d-flex", "justify-content-between", "greenlist");
+        li.dataset.img = `${songArray[i].album.cover}`;
+        li.dataset.song = `${songArray[i].title_short}`;
+        li.dataset.artistName = `${artist.name}`;
         li.innerHTML = `
           <div class="d-flex" style="gap:20px;">
           <div class="d-flex align-items-center tinynum" style="width:10px; position:relative;">
@@ -75,7 +78,7 @@ const getSongList = (artist) => {
           <div style="width:50px; height:50px;">
           <img src="${songArray[i].album.cover}" class="img-fluid"/>
           </div>
-          <div class="m-0" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div>
+          <div class="m-0 littletitle" style="display:flex; align-items:center;">${songArray[i].title_short}</div></div>
           <div class="text-truncate" style="width:40%; display:flex; justify-content:center; align-items:center">${songArray[i].album.title}</div>
           <div class="d-flex align-items-center">
           <div class='favoriteheart mr-5'>
@@ -171,18 +174,30 @@ const displayPause = () => {
 playbtn.addEventListener("click", displayPause);
 pausebtn.addEventListener("click", displayPlay);
 
-//little play button
+//li set to play
 
 const setToPlay = (event) => {
-  const sisterDiv = document.getElementById("artistfooter");
-  const selected = event.target;
-  const li = document.querySelectorAll(".greenlist");
+  const img = document.getElementById("smalbumpic");
+  const musicInfo = document.querySelector(".music-player-info");
+  const artistInfo = document.querySelector(".artist-small-player");
+  //target specific li element
+  const selected = event.target.closest("li");
 
+  //turns selected green
   selected.classList.toggle("spotifygreen");
-  //const title = event.target;
-  const img = document.createElement("img");
 
-  console.log(event.target);
+  //uses dataset to retrieve the correct info and send it to the correct place
+  img.src = selected.dataset.img;
+  musicInfo.innerText = selected.dataset.song;
+  artistInfo.innerText = selected.dataset.artistName;
+
+  const littleTitle = document.querySelector(".music-player-info");
+
+  //littleTitle.innerText = selected.innerText;
+
+  //const title = event.target;
+
+  console.log(selected.dataset.img);
 };
 
 const getBtns = () => {
