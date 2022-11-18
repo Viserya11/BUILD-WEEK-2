@@ -82,8 +82,8 @@ const audio = document.querySelector("#audio")
     audio.src = preview
     audio.play()
 
-   const songtitle = document.querySelector('.songtitle').
-   songtitle.classList.add("greentext")
+   //const title = document.querySelector('.songrow')
+   //title.classList.add("greentext")
     
 }
 
