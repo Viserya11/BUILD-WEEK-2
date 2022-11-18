@@ -87,8 +87,14 @@ const audio = document.querySelector("#audio")
     
 }
 
+const checkData = () => {
+    const getUsername = localStorage.getItem("username");
+    const getPassword = localStorage.getItem("password");
+  
+   document.querySelector(".account-dropdown-nav-link").innerHTML = `${getUsername}`
+}
 
-
+checkData()
 
 
 
