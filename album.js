@@ -1,6 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const albumId = urlParams.get("albumId");
 function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
+const pausebutton = document.querySelector("#pause")
+pausebutton.classList.add("hidden")
 
 
 const options = {
@@ -76,10 +78,12 @@ console.log(album)
 const playertitle = document.querySelector(".bottomsongtitle")
 const songduration = document.querySelector(".duration")
 const audio = document.querySelector("#audio")
+const playbutton = document.querySelector("#play")
 
     playertitle.innerHTML =`<p class="bottomsongtitle">${songtitle}</p>`
     songduration.innerHTML = `<span class="duration">${fmtMSS(duration)}</span>`
     audio.src = preview
+    playbutton.classList.add("hidden")
     audio.play()
 
     
@@ -104,5 +108,15 @@ const checkData = () => {
 
 checkData()
 
+function pauseSong() {
 
+const playbutton = document.querySelector("#play")
+playbutton.classList.remove("hidden")
+
+pausebutton.classList.add("hidden")
+
+
+audio.pause()
+
+}
 

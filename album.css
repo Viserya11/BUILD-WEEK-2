@@ -484,6 +484,10 @@ margin-top: 15px;
   margin-right: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 /*@media only screen and (max-width: 768px) {
   /* For mobile phones: 
   [class*="col-"] {
