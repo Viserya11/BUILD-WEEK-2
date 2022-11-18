@@ -398,6 +398,10 @@ margin-top: 15px;
   box-shadow: -200px 0 0 200px #007bff;
 }
 
+.player {
+  padding-left: 200px;
+}
+
 .playerimg {
   height: 7vh;
   margin-left: 20px;
