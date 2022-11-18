@@ -114,8 +114,9 @@ ul {
 
 @media (min-width: 768px) {
   .player {
-    padding-left: 200px;
+    padding-left: 100px;
     max-width: calc(100vw);
+    padding-right: ;
   }
   .spotify-navbar-mobile{
     display: none;
