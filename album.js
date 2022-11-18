@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const albumId = urlParams.get("album_id");
 function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
+
 const options = {
     method: "GET",
     headers: {
@@ -44,7 +45,7 @@ songinfo.innerHTML = ""
 for (i=0; i < album.tracks.data.length; i++) {
     songinfo.innerHTML +=`
     
-    <div class="songrow" onclick="passDetails('${album.tracks.data[i].title}', '${album.tracks.data[i].duration}', '${album.tracks.data[i].preview}', '${album.tracks.data[i].title}', '${album.tracks.data[i].artist.name}', '${album.tracks.data[i].album.cover_small}' )">
+    <div class="songrow" onclick="passDetails('${album.tracks.data[i].title}', '${album.tracks.data[i].duration}', '${album.tracks.data[i].preview}' )">
             <div class="songtitle col">
               <span class="songnumber">${i+1}</span>${album.tracks.data[i].title}
             </div>
@@ -67,17 +68,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
  
-async function passDetails(songtitle, duration, preview, artistname, cover) {
+async function passDetails(songtitle, duration, preview) {
     const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId, options)
 const album = await response.json();
 console.log(album)
 
 const playertitle = document.querySelector(".bottomsongtitle")
 const songduration = document.querySelector(".duration")
+const audio = document.querySelector("#audio")
 
     playertitle.innerHTML =`<p class="bottomsongtitle">${songtitle}</p>`
     songduration.innerHTML = `<span class="duration">${fmtMSS(duration)}</span>`
-
+    audio.src = preview
+    audio.play()
 }
 
 
