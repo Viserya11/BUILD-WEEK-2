@@ -84,6 +84,7 @@ const playbutton = document.querySelector("#play")
     songduration.innerHTML = `<span class="duration">${fmtMSS(duration)}</span>`
     audio.src = preview
     playbutton.classList.add("hidden")
+    pausebutton.classList.remove("hidden")
     audio.play()
 
     
@@ -110,13 +111,23 @@ checkData()
 
 function pauseSong() {
 
+
+
 const playbutton = document.querySelector("#play")
 playbutton.classList.remove("hidden")
-
 pausebutton.classList.add("hidden")
+
 
 
 audio.pause()
 
+}
+
+function playSong() {
+    const playbutton = document.querySelector("#play")
+    playbutton.classList.add("hidden")   
+    pausebutton.classList.remove("hidden")
+
+    audio.play()
 }
 
